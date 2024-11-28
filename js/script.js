@@ -32,13 +32,14 @@ const winlose = document.querySelector('.win-lose')
 
 
 function playGame() {
-    cpuBox.style.animation = 'animationvs 1s infinite'
+    
     message.style.animation = "none";
     winlose.style.color = 'black'
     let randomNum = Math.floor(Math.random() * 3) + 1
     if (playerSelected === '') {
         message.style.color = 'red';
         message.textContent = 'Por favor elije una opcion'
+        cpuBox.style.animation = 'animationvs 1s infinite'
     }
 
     if (randomNum === 1) {
