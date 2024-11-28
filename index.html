@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra - Papel - Tijeras</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-container">
+        <!-- Lifes container -->
+        <div class="life-container">
+            <div class="player">
+                <h3>Jugador</h3>
+                <div class="lifes">
+                    <img src="./img/heart.png" alt="" class="heart1 ph1">
+                    <img src="./img/heart.png" alt="" class="heart2 ph2">
+                    <img src="./img/heart.png" alt="" class="heart3 ph3">
+                </div>
+            </div>
+            <div class="cpu">
+                <h3>CPU</h3>
+                <div class="lifes">
+                    <img src="./img/heart.png" alt="" class="heart1 cpuh1">
+                    <img src="./img/heart.png" alt="" class="heart2 cpuh2">
+                    <img src="./img/heart.png" alt="" class="heart3 cpuh3">
+                </div>
+            </div>
+        </div>
+        <!-- Main Container -->
+        <div class="main">
+            <div class="player-box"></div>
+            <div class="vs-box"></div>
+            <div class="cpu-box"></div>
+        </div>
+        <!-- Select Container -->
+        <div class="select-container">
+            <div class="message-container">
+                <p class="message"></p>
+            </div>
+            <div class="play-container">
+                <label for="play" class="label-play">
+                    <img src="./img/play.png" alt="">
+                </label>
+                <button class="play" id="play" onclick="playGame()"></button>
+            </div>
+            <div class="reset-continue-container">
+                <label for="continue" class="continue">Continuar</label>
+                <button id="continue" onclick="resetGame()" disabled>continuar</button>
+                <p class="chances"></p>
+                <button class="btn-reset" id="reset">reset</button><br>
+                <p class="win-lose"></p>
+            </div>
+            <div class="select">
+                <label for="rock">
+                    <img src="./img/rock.png" alt="" class="select-container-img" id="rock-button">
+                </label>
+                <label for="paper">
+                    <img src="./img/paper.png" alt="" class="select-container-img" id="paper-button">
+                </label>
+                <label for="scissors">
+                    <img src="./img/scissors.png" alt="" class="select-container-img" id="scissors-button">
+                </label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="radio" id="rock">
+                <input type="checkbox" name="radio" id="paper">
+                <input type="checkbox" name="radio" id="scissors">
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
